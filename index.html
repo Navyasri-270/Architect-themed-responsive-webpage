@@ -1,119 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Studio Arc – Architecture Portfolio</title>
-
-  <!-- Google Font + Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio Arc - Architectural Design</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- ───── HEADER / NAV ───── -->
   <header class="header">
-    <a class="logo" href="#">Studio Arc</a>
-
-    <nav id="nav" class="nav">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><button id="darkToggle" aria-label="Toggle dark mode"><i class="fa-regular fa-moon"></i></button></li>
-      </ul>
+    <a href="#" class="logo">Studio Arc</a>
+    <nav class="nav" id="nav">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <button id="themeToggle" aria-label="Dark Mode Toggle">🌙</button>
     </nav>
-
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div id="menu-icon">&#9776;</div>
   </header>
 
-  <!-- ───── HERO ───── -->
   <section class="hero">
-    <div class="overlay"></div>
-    <div class="hero-inner">
-      <h1>Designing Spaces that Inspire.</h1>
-      <p>Modern | Sustainable | Timeless</p>
-      <a href="#projects" class="btn">View Our Work</a>
+    <div class="hero-text">
+      <h1>Modern Architecture Redefined</h1>
+      <p>Designing elegant, sustainable and innovative spaces.</p>
+      <a href="#projects" class="btn">Explore Projects</a>
     </div>
   </section>
 
-  <!-- ───── ABOUT ───── -->
-  <section id="about" class="about container">
-    <h2>About Studio Arc</h2>
-    <p>
-      We are an award‑winning architectural studio focused on elevating everyday life through sustainable,
-      human‑centric design. Our multidisciplinary team works at the intersection of creativity,
-      technology, and environmental stewardship.
-    </p>
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>Studio Arc is a forward-thinking architectural studio focused on sustainability, functionality, and aesthetics. With over a decade of experience, we bring dream structures to life through creativity and precision.</p>
   </section>
 
-  <!-- ───── PROJECTS ───── -->
-  <section id="projects" class="projects container">
-    <h2>Featured Projects</h2>
-
-    <!-- Filter buttons -->
-    <div class="filters">
-      <button data-filter="all" class="filter active">All</button>
-      <button data-filter="residential" class="filter">Residential</button>
-      <button data-filter="commercial" class="filter">Commercial</button>
-      <button data-filter="public" class="filter">Public</button>
-    </div>
-
-    <div class="grid">
-      <!-- CARD -->
-      <article class="card" data-category="residential">
-        <img src="https://images.unsplash.com/photo-1558980664-b3df8474bfb6?w=600&auto=format&fit=crop" alt="Project A image">
-        <div class="card-content">
-          <h3>Hilltop Residence</h3>
-          <p>Off‑grid passive‑house overlooking the valley.</p>
-        </div>
-      </article>
-
-      <article class="card" data-category="commercial">
-        <img src="https://images.unsplash.com/photo-1574631935871-b6dc39d5366e?w=600&auto=format&fit=crop" alt="Project B image">
-        <div class="card-content">
-          <h3>Glass Atrium Mall</h3>
-          <p>Retail complex flooded with natural light.</p>
-        </div>
-      </article>
-
-      <article class="card" data-category="public">
-        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&auto=format&fit=crop" alt="Project C image">
-        <div class="card-content">
-          <h3>Civic Library</h3>
-          <p>Net‑zero carbon public space for knowledge sharing.</p>
-        </div>
-      </article>
-
-      <!-- duplicate / extend cards as needed -->
+  <section id="projects" class="projects">
+    <h2>Our Projects</h2>
+    <div class="project-grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80" alt="Villa">
+        <h3>Mountain Villa</h3>
+        <p>Luxury villa design with nature integration.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1508923567004-3a6b8004f3d3?auto=format&fit=crop&w=800&q=80" alt="Skyscraper">
+        <h3>Urban Skyscraper</h3>
+        <p>A modern commercial marvel in the heart of the city.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1529429611273-65073fd1d129?auto=format&fit=crop&w=800&q=80" alt="Library">
+        <h3>City Library</h3>
+        <p>Innovative public space blending knowledge and design.</p>
+      </div>
     </div>
   </section>
 
-  <!-- ───── CONTACT ───── -->
   <section id="contact" class="contact">
-    <div class="contact-inner container">
-      <h2>Let’s Collaborate</h2>
-      <form id="contactForm" action="https://formspree.io/f/mknlkbwv" method="POST">
-        <div class="field"><input required type="text" name="name" placeholder="Your Name"></div>
-        <div class="field"><input required type="email" name="email" placeholder="Email Address"></div>
-        <div class="field"><textarea required name="message" rows="4" placeholder="Tell us about your project…"></textarea></div>
-        <button type="submit" class="btn">Send Message</button>
-        <p id="formMsg"></p>
-      </form>
-    </div>
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/mknlkbwv" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
   </section>
 
-  <!-- ───── FOOTER ───── -->
   <footer class="footer">
-    <p>© 2025 Studio Arc. All rights reserved.</p>
-    <div class="social">
-      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-      <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
-    </div>
+    <p>© 2025 Studio Arc. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
